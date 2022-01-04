@@ -11,12 +11,9 @@ export default function Login(props) {
     const [loginStatus, setLoginStatus] = useState(null);
     const [loginMessage,setLoginMessage] = useState(" ");
 
-    const login = (e) => {
-        // should bring data using axios
-        // from backend (GET /tasks) 
-        e.preventDefault(); // يقفل التحديث التلقلئي للصفحه 
+    const login = (e) => 
+        e.preventDefault();  
         const userInfo={
-        //اكتبها بنفس الطريقه الي في (بوست مان) هي تلقائي ترسل و تحفظ البيانات 
             email , 
             password  
         }
@@ -36,10 +33,11 @@ export default function Login(props) {
             setLoginStatus(err.response.status)
             setLoginMessage(err.response.data.message)
           });
-      };
-    
+     
+
+     
     return(
-    
+  
      <div class="mb-7 m-3" >
        <form  className="d-grid-3 m-7 d-flax-justify-content-center">
        <div class="form-floating m-3">
@@ -67,7 +65,7 @@ export default function Login(props) {
 
 {(loginStatus === 400  || loginStatus ==404 )&& ( <div class="alert alert-success" role="alert">
     {loginMessage}
-</div>)}
+  </div>)}
 
     < button className="m-3 fs-6 " onClick={login}> login </ button >
    <p> YOU DONT HAVE ACCOUNT <Link to="/Register"> GO REGISTER</Link></p>
@@ -75,35 +73,4 @@ export default function Login(props) {
 
 </div>
 
- )
-
-
-}
- 
- /* 
- الكود القديم 
- <form>
-      <label htmlFor= 'email' class="form-label"> Email:</label>  
-      <input
-        value={email}
-        type="email"
-        placeholder="Write email here ..."
-        onChange={(e) => {
-        setEmail(e.target.value);
-             }}        />
-       <br/>
-    <label htmlFor= 'password'> Password:</label>
-      <input 
-         value={password}
-         type="password"
-         placeholder="Write password here ..."
-         onChange={(e) => {
-         setPassword(e.target.value);
-           }}/>
-        <br/>  
-     < button class=" mb-3 btn-outline-success"
-     onClick={login}> login </ button >
-     <Link to="/Register">REGISTER</Link>
-  </form>
- */
- 
+ ); };

@@ -31,16 +31,12 @@ export default function Register(){
       });
   };
 
-
- 
-   
-
    return(     
 
-<div class="mb-3">
+    <div class="mb-3">
 
-  <form>
-  <div class="form-floating m-3">
+     <form>
+      <div class="form-floating m-3">
       <input type="name" class="form-control" id="floatingInput"
        
        placeholder="Write your name here ..."
@@ -84,42 +80,3 @@ export default function Register(){
   )
  }
 
- /*
-   
- // الكود القديم 
- <form>
-          <label htmlFor= 'name'> Name:</label>
-          <input
-          type="text"
-          placeholder="Write username here ..."
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-          value={username} />
-            <br/>
-            <label htmlFor= 'email'> Email:</label>
-           <input  
-          type="email"
-          placeholder="Write email here ..."
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          value={email}
-        />
-             <br/>
-          <label htmlFor= 'password'> Password:</label>
-          <input
-          type="password"
-          placeholder="Write password here ..."
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          value={password}
-        />
-              <br/>  
-                <button onClick={Register}> Register </ button>
-
-                <br/>
-                <Link to="/Login">LOGIN</Link>
-                </form>
-                  */

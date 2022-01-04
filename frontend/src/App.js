@@ -1,6 +1,6 @@
 
-import React, { useState , useEffect } from "react"; // استدعاء الرياكت و اليوز ستسيت 
-import "./App.css" ; // استدعا التنسيق 
+import React, { useState , useEffect } from "react";
+import "./App.css" ;
 
 import axios from "axios";//عشان اقدر اقراء البيانات داخل الباك اند 
 import { Routes, Route, Link } from "react-router-dom";
@@ -16,10 +16,10 @@ export default function App() {
   const [login, setLogin ] = useState(false);
   const [username, setUserName] = useState("");
   
-  useEffect(() => {getData();}, []);//يحدث الصفحه تلقايي
+  useEffect(() => {getData();}, []);
 
  //داله تجيب كل البيانات و تحفظها 
- // استدعيها في زر 
+ 
   const getData = () => {
   axios
     .get(`http://localhost:5000/tasks`)
